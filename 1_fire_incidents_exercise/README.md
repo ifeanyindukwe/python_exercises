@@ -33,7 +33,7 @@ This guide walks you through setting up a virtual environment, creating a Scrapy
 ### 1.2 Change Directory into Project Folder
 Change your directory into the project folder fire_incidents_exercise
 ```sh
-cd fire_incidents_exercise
+cd 1_fire_incidents_exercise
 ```
 
 ### 1.3 Create a Virtual Environment

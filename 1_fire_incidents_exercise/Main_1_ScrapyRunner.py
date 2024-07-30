@@ -22,7 +22,8 @@ class ScrapyRunner:
                 os.remove(self.output_file)
 
             # Full path to the scrapy executable in your virtual environment
-            scrapy_executable = r'C:\Users\Ifeanyi\PythonProgramFiles\python_exercises\fire_incidents_exercise\venv\Scripts\scrapy.exe'  # Update with the actual path to scrapy
+            scrapy_executable = r'C:\Users\Ifeanyi\PythonProgramFiles\python_exercises\1_fire_incidents_exercise\venv\Scripts\scrapy.exe'  # Update with the actual path to scrapy
+            # scrapy_executable = r'.\venv\Scripts\scrapy.exe'  # Update with the actual path to scrapy
             
             # Change to the correct directory and adjust the output path
             subprocess.run([scrapy_executable, 'crawl', self.spider_name, '-o', os.path.abspath(self.output_file)], 
