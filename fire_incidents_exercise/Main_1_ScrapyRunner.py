@@ -21,12 +21,17 @@ class ScrapyRunner:
             if os.path.exists(self.output_file):
                 os.remove(self.output_file)
 
+            # Full path to the scrapy executable in your virtual environment
+            scrapy_executable = r'C:\Users\Ifeanyi\PythonProgramFiles\python_exercises\fire_incidents_exercise\venv\Scripts\scrapy.exe'  # Update with the actual path to scrapy
+            
             # Change to the correct directory and adjust the output path
-            subprocess.run(['scrapy', 'crawl', self.spider_name, '-o', os.path.join('..', '..', '..', self.output_file)], 
+            subprocess.run([scrapy_executable, 'crawl', self.spider_name, '-o', os.path.abspath(self.output_file)], 
                            check=True, cwd=os.path.join('fire_incidents', 'fire_incidents', 'spiders'))
             print("Spider executed successfully.")
         except subprocess.CalledProcessError as e:
             print(f"Error occurred while running the spider: {e}")
+        except FileNotFoundError as e:
+            print(f"File not found: {e}")
 
 # Example usage
 if __name__ == "__main__":
