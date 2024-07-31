@@ -28,7 +28,7 @@ This guide walks you through setting up a virtual environment, creating a Scrapy
     - On Windows: Press `Ctrl + Shift + P`
     - On Mac: Press `Cmd + Shift + P`
 - Type: `Python: Select Interpreter`
-- Choose your preferred interpreter (e.g., Python 3.11.9 64-bit from the Microsoft Store).
+- Choose your preferred interpreter (e.g., Python 3.11.9 64-bit (Microsoft Store)).
 
 ### 1.2 Change Directory into Project Folder
 Change your directory into the project folder fire_incidents_exercise
