@@ -66,6 +66,10 @@ class AnalyzeData:
         # return num_stratford_incidents, num_medical_incidents, places_medical_incidents_df, places_summary_df
         return num_stratford_incidents, num_medical_incidents, places_summary_df
     
+    def save_summary(self, places_summary_df, output_file_path):
+        # Save the DataFrame to a CSV file
+        places_summary_df.to_csv(output_file_path, index=False)
+        print(f"Summary saved to {output_file_path}")
 
 # Example usage
 if __name__ == "__main__":
@@ -81,5 +85,9 @@ if __name__ == "__main__":
         # print(places_medical_incidents_df)
         print("Summary of Places where Medical incidents were reported in the last 7 days:")
         print(places_summary_df)
+
+        # Save the summary to a CSV file
+        output_file_path = '../2_plot_into_points_exercise/data/summary_incident_reports_by_places.csv'
+        analyzer.save_summary(places_summary_df, output_file_path)
     except FileNotFoundError as e:
         print(e)

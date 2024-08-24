@@ -5,13 +5,12 @@
     - On Windows: Press `Ctrl + Shift + P`
     - On Mac: Press `Cmd + Shift + P`
 - Type: `Python: Select Interpreter`
-- Choose your preferred interpreter (e.g., Python 3.9.18 64-bit c:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe).
-
+- Choose your preferred interpreter (e.g., Python 3.11.9 64-bit (Microsoft Store)).
 
 ### 1.2 Change Directory into Project Folder
 Change your directory into the project folder fire_incidents_exercise
 ```sh
-cd 1_fire_incidents_exercise
+cd 5_plotly_exercise
 ```
 
 ### 1.3 Create a Virtual Environment
@@ -26,11 +25,6 @@ Activate the virtual environment to use the installed packages.
 - On Windows:
     ```sh
     .\venv\Scripts\activate
-    ```
-
-- On Unix or MacOS:
-    ```sh
-    source venv/bin/activate
     ```
 
 ### 1.5 Upgrade pip
@@ -48,4 +42,3 @@ If you encounter PowerShell permission issues on Windows, use:
 ```sh
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
-
